@@ -1,5 +1,5 @@
 //OŠpŒ`‚ÌŒvZ
-
+//
 #include <iostream>
 #include <math.h>
 #define RadToDec 57.29577951f;
