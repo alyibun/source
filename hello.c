@@ -10,7 +10,7 @@ int main(){
 	*/
 	i=0;
 	while(i<10){
-		printf("hello world\n");
+		printf("%d hello world\n",i+1);
 		i++;
 	}
     return 0;
