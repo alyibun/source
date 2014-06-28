@@ -1,0 +1,34 @@
+int count=0;
+int movex=20,movey=20;
+int vel=10;
+int size=3;
+int left=0,right=1;
+
+void setup(){
+  size(500,500);
+}
+
+void draw(){
+  background(255,255,255);
+  strokeWeight(size);
+  ellipse(movex,movey,20,20);
+  if(right==1){
+    movex+=3;
+  }
+  else if(left==1){
+    movex-=3;
+  }
+  if(movex>490){
+    left=1;
+    right=0;
+  }
+  else if(movex<10){
+    left=0;
+    right=1;
+  }
+  vel++;
+  movey+=vel;
+  if(movey>490){
+    vel=-30;
+  }
+}
