@@ -1,0 +1,33 @@
+float x=250;
+float y=250;
+float mx=0,my=0;
+float dx=0,dy=0;
+void setup(){
+  size(500,500);
+}
+
+boolean isInsideCircle(float x,float y,float ex,float ey){
+  return (x-ex)(x-ex)+(y-ey)(y-ey)700;
+}
+void draw(){
+  background(255);
+  ellipse(x,y,50,50);
+}
+void mousePressed(){
+  if(isInsideCircle(mouseX,mouseY,x,y)){
+    mx=mouseX;
+    my=mouseY;
+    dx=x;
+    dy=y;
+  }
+}
+void mouseDragged(){
+  if(mx!=0my!=0){
+    x=dx+(mouseX-mx);
+    y=dy+(mouseY-my);
+  }
+}
+void mouseReleased(){
+  mx=0;
+  my=0;
+}
