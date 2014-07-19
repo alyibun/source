@@ -7,7 +7,7 @@ void setup(){
 }
 
 boolean isInsideCircle(float x,float y,float ex,float ey){
-  return (x-ex)(x-ex)+(y-ey)(y-ey)700;
+  return (x-ex)*(x-ex)+(y-ey)*(y-ey)<700;
 }
 void draw(){
   background(255);
@@ -22,7 +22,7 @@ void mousePressed(){
   }
 }
 void mouseDragged(){
-  if(mx!=0my!=0){
+  if(mx!=0||my!=0){
     x=dx+(mouseX-mx);
     y=dy+(mouseY-my);
   }
